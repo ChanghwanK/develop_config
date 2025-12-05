@@ -118,11 +118,6 @@
         "command": "cursor.generateGitCommitMessage"
     },
     {
-        "key": "ctrl+p",
-        "command": "git.push",
-        "when": "!operationInProgress"
-    },
-    {
         "key": "alt+left",
         "command": "workbench.action.terminal.sendSequence",
         "args": {
@@ -185,11 +180,63 @@
         "when": "terminalFocus"
     },
     {
-        "key": "ctrl+m",
-        "command": "git.commit"
-    },
-    {
         "key": "ctrl+s",
         "command": "git.stageAll"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "editor.cpp.toggle"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "git.sync",
+        "when": "!operationInProgress"
+    },
+    {
+        "key": "ctrl+m",
+        "command": "git.commit",
+        "when": "!operationInProgress"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "cmd+j",
+        "command": "-workbench.action.togglePanel",
+        "when": "!isAuxiliaryWindowFocusedContext"
+    },
+    {
+        "key": "shift+alt+t",
+        "command": "editor.cpp.disableenabled"
+    },
+    {
+        "key": "shift+alt+y",
+        "command": "editor.action.enableCppGlobally"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "-editor.action.transposeLetters",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+]",
+        "command": "workbench.action.increaseViewSize",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "workbench.action.decreaseViewSize",
+        "when": "editorFocus"
     }
+    // {
+    //     "key": "cmd+n",
+    //     "command": "-workbench.action.files.newUntitledFile"
+    // },
 ]
