@@ -15,7 +15,6 @@
     },
     "database-client.autoSync": true,
     "editor.accessibilitySupport": "off",
-    "editor.fontSize": 15,
     "editor.formatOnSave": true,
     "editor.minimap.enabled": true,
     "explorer.openEditors.minVisible": 10,
@@ -48,7 +47,7 @@
         "Q_NEW_SESSION": "1"
     },
     "terminal.integrated.fontFamily": "MesloLGS NF",
-    "terminal.integrated.fontSize": 14.5,
+    "terminal.integrated.fontSize": 14,
     "terminal.integrated.hideOnLastClosed": false,
     "terminal.integrated.persistentSessionScrollback": 1000,
     "terminal.integrated.scrollback": 3000,
@@ -61,7 +60,84 @@
     },
     "window.commandCenter": true,
     "workbench.activityBar.orientation": "vertical",
-    "workbench.colorTheme": "One Dark Modern Pro",
     "workbench.iconTheme": "vscode-great-icons",
-    "cursor.composer.textSizeScale": 1.15
+    "window.zoomLevel": -0.5,
+    "indentRainbow.indicatorStyle": "light",
+    "indentRainbow.colors": [
+        "rgba(255,255,64,0.30)",
+        "rgba(127,255,127,0.30)",
+        "rgba(255,127,255,0.30)",
+        "rgba(79,236,236,0.30)"
+    ],
+    "editor.mouseWheelZoom": true,
+    "workbench.editor.editorActionsLocation": "titleBar",
+    "workbench.activityBar.location": "top",
+    "editor.tokenColorCustomizations": {
+        "[Cursor Dark]": {
+            "textMateRules": [
+                {
+                    "scope": "support.type.property-name.json",
+                    "settings": {
+                        "foreground": "#D4A574"
+                    }
+                },
+                {
+                    "scope": "string.quoted.double.json",
+                    "settings": {
+                        "foreground": "#98C379"
+                    }
+                },
+                {
+                    "scope": "constant.numeric.json",
+                    "settings": {
+                        "foreground": "#56B6C2"
+                    }
+                },
+                {
+                    "scope": "constant.language.json",
+                    "settings": {
+                        "foreground": "#56B6C2"
+                    }
+                },
+                {
+                    "scope": "entity.name.tag.yaml",
+                    "settings": {
+                        "foreground": "#E06C75"
+                    }
+                },
+                {
+                    "scope": "string.unquoted.yaml",
+                    "settings": {
+                        "foreground": "#98C379"
+                    }
+                },
+                {
+                    "scope": "string.unquoted.plain.out.yaml",
+                    "settings": {
+                        "foreground": "#98C379"
+                    }
+                },
+                {
+                    "scope": "string.quoted.double.yaml",
+                    "settings": {
+                        "foreground": "#98C379"
+                    }
+                },
+                {
+                    "scope": "string.quoted.single.yaml",
+                    "settings": {
+                        "foreground": "#98C379"
+                    }
+                },
+                {
+                    "scope": "constant.numeric.yaml",
+                    "settings": {
+                        "foreground": "#56B6C2"
+                    }
+                }
+            ]
+        }
+    },
+    "workbench.colorTheme": "Cursor Dark",
+    "editor.fontSize": 14
 }
