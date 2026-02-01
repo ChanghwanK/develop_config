@@ -1,5 +1,5 @@
-# Amazon Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
+# Kiro CLI pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -148,18 +148,26 @@ PROMPT='$(kube_ps1)'$PROMPT
 KUBE_PS1_SYMBOL_ENABLE=false
 
 # kubectl aliases
-alias kgdp="kubectl get deployment"
 alias k="kubectl"
+alias klg="kubectl logs"
+alias kgcy="kubectl get cm -o yaml"
+alias kgdp="kubectl get deployment"
+alias kdp="kubectl describe pod"
 alias kt="kubectl top"
 alias ktp="kubectl top pod"
 alias ktn="kubectl top node"
 alias kg="kubectl get"
+alias kgn="kubectl get nodes"
+alias kd="kubectl describe"
+alias kdn="kubectl describe nodes"
+alias kl="kubectl logs -f"
 alias klogs="kubectl logs -f"
-alias kdesc="kubectl describe"
 alias kgp="kubectl get pods"
+alias kgpw="kubectl get pods -o wide"
+alias kgpy="kubectl get pods -o yaml"
+alias kdp="kubectl describe pod"
 alias kep="kubectl edit pod"
 alias kge="kubectl get events --sort-by=.lastTimestamp"
-alias kdps="kubectl describe pod"
 alias kctx="kubectx"
 alias kc="kubectx"
 alias kns="kubens"
@@ -167,7 +175,6 @@ alias kn="kubens"
 alias kcdev="kctx infra-k8s-dev"
 alias kcstg="kctx infra-k8s-stg"
 alias kcprod="kctx infra-k8s-prod"
-alias kgnp="kubectl get nodepools"
 
 alias kdev="kctx k8s-dev"
 alias kstg="kctx k8s-stg"
@@ -194,17 +201,23 @@ alias dp="deployment"
 # alias gimme-aws-creds
 alias gim="gimme-aws-creds"
 
+# claude
+alias cl="claude --dangerously-skip-permissions"
+
+# auto alias 
+alias cdkubernetes="cd ~/workspace/riiid/kubernetes"
+alias cdterraform="cd ~/workspace/riiid/kubernetes"
+alias sr="source ~/.zshrc"
+alias cdworkspace="cd ~/workspace"
+alias open-zshrc="cursor ~/.zshrc"
+alias open-kubernetes="cursor ~/workspace/riiid/kubernetes"
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export PATH="$HOME/.local/bin:$PATH"
-
-# Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 # Python 
 export PYENV_ROOT="$HOME/.pyenv"
@@ -217,3 +230,6 @@ export AWS_PROFILE=okta-devops
 
 # # gvm
 # [[ -s "/Users/changhwan/.gvm/scripts/gvm" ]] && source "/Users/changhwan/.gvm/scripts/gvm" >/dev/null 2>&1
+
+# Kiro CLI post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"
